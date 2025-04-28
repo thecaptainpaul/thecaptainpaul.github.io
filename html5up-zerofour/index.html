@@ -92,10 +92,122 @@
 										</div>
 										<div class="col-4 col-12-medium">
 											<section>
-												<a href="#" class="image featured"><img src="images/TableauDashiboard1.jpg" alt="" /></a>
-												<header class="second icon solid fa-chart-bar">
-													<h3>PYTHON VISUALIZATION</h3>
-													<p>USING MATPLOTLIB & SEABORN</p>
+												<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Dashboard Portfolio</title>
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+            overflow: auto; /* Enable scroll if needed */
+            text-align: center;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%; /* Adjust the width for the modal image */
+            max-width: 700px;
+        }
+
+        #caption {
+            color: #fff;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ccc;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Hover effect on the image */
+        .image.featured img {
+            transition: transform 0.3s ease;
+        }
+
+        .image.featured:hover img {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Portfolio Item with Image -->
+<a href="#" class="image featured" id="imageLink">
+    <img src="Images/coffedashboard.png" alt="Coffee Dashboard" id="dashboardImage"/>
+</a>
+
+<header class="second icon solid fa-chart-bar">
+    <h3>MICROSOFT EXCEL VISUALISATION</h3>
+</header>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="close" id="closeModal">&times;</span>
+    <img class="modal-content" id="modalImage" />
+    <div id="caption"></div>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("imageModal");
+
+    // Get the image and the modal image
+    var img = document.getElementById("dashboardImage");
+    var modalImg = document.getElementById("modalImage");
+    var captionText = document.getElementById("caption");
+
+    // Get the link element (the anchor tag)
+    var link = document.getElementById("imageLink");
+
+    // When the user clicks on the image (link), open the modal and show the larger image
+    link.onclick = function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        modal.style.display = "block"; // Show the modal
+        modalImg.src = img.src; // Set the image in the modal to be the clicked image
+        captionText.innerHTML = "Coffee Dashboard"; // Optional caption
+    }
+
+    // When the user clicks on the <span> (x), close the modal
+    var closeModal = document.getElementById("closeModal");
+    closeModal.onclick = function() {
+        modal.style.display = "none"; // Hide the modal
+    }
+
+    // Close the modal if the user clicks anywhere outside of the modal image
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none"; // Hide the modal
+        }
+    }
+</script>
+
+</body>
+</html>
+
 												</header>
 											</section>
 										</div>
@@ -109,7 +221,7 @@
 											</section>
 										</div>
 										<div class="col-12">
-											<p>The above visualizations were created using the labelled programs.</p>
+											<p>The above visualisations were created using the labelled programs.</p>
 										</div>
 									</div>
 								</section>
@@ -125,10 +237,10 @@
 										<div class="col-6 col-12-medium">
 											<section>
 												<header class="major">
-													<h2>Coding and Queries</h2>
+													<h2>Queries</h2>
 													<!-- <p>This section highlights my SQL queries and Python notebook </p> -->
 												</header>
-												<p>This section highlights my SQL queries and Python notebook
+												<p>This section highlights my SQL queries
 													<!-- <div>Querrying large data set with sql is one of  my favourite things to do
 													 
 										
@@ -216,17 +328,17 @@
 														</article>
 	
 													<!-- Excerpt -->
-														<article class="box excerpt">
-																	<h3><a href="https://github.com/thecaptainpaul/BASIC-SQL-SELECT/blob/main/BASIC%20SQL%20SELECT%20QUERIES%20.sql">SQL queries</a></h3>
-																	<a href="https://github.com/thecaptainpaul/Data-types-Basic-syntax/blob/main/Pt%201.ipynb" class="image left"><img src="images/pic05.jpg" alt="" /></a>
-															<div>
-																<header>
+														<!-- <article class="box excerpt"> -->
+																	<!-- <h3><a href="https://github.com/thecaptainpaul/BASIC-SQL-SELECT/blob/main/BASIC%20SQL%20SELECT%20QUERIES%20.sql">SQL queries</a></h3> -->
+																	<!-- <a href="https://github.com/thecaptainpaul/Data-types-Basic-syntax/blob/main/Pt%201.ipynb" class="image left"><img src="images/pic05.jpg" alt="" /></a> -->
+															<!-- <div> -->
+																<!-- <header> -->
 																	<!-- <span class="date">MARCH 23</span> -->
-																	<h3><a href="https://github.com/thecaptainpaul/Data-types-Basic-syntax/blob/main/Pt%201.ipynb">DATA TYPES AND BASIC SYNTAX</a></h3>
-																</header>
-																<p>Notebook containing few examples of Python data types , syntax , rules and simple aggregations.</p>
-															</div>
-														</article>
+																	<!-- <h3><a href="https://github.com/thecaptainpaul/Data-types-Basic-syntax/blob/main/Pt%201.ipynb">DATA TYPES AND BASIC SYNTAX</a></h3> -->
+																<!-- </header> -->
+																<!-- <p>Notebook containing few examples of Python data types , syntax , rules and simple aggregations.</p> -->
+															<!-- </div> -->
+														<!-- </article> -->
 	
 													<!-- Excerpt -->
 														<!-- <article class="box excerpt">
@@ -329,7 +441,7 @@
 								<!-- About -->
 									<section>
 										<h2><strong>HELLO THERE ! </strong> GLAD YOU SCROLLED THIS FAR</h2>
-										<p> If you will like to work with  <strong>me</strong>, or get me on a project
+										<p> If you will like to work with me, or get me on a project
 										 do not hesitate to reach out <a href="http://twitter.com/ajlkn"></a><a href=""></a>
 										<a href="http://html5up.net/license/"></a>
 									</p>
@@ -356,11 +468,11 @@
 												<div class="col-6 col-12-small">
 													<dl class="contact">
 														<dd>
-														<dt>Address</dt>
+														<dt>LOCATION</dt>
 														
 														<dd>
-															Wolverhampton<br />
-															West midlands<br />
+															<!-- Wolverhampton<br /> -->
+															<!-- West midlands<br /> -->
 															United Kingdom
 														</dd>
 														<dt>Phone</dt>
